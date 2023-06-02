@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Cider2
+StartupWMClass=Cider2
+Comment=Project Cider. A new look into listening and enjoying music in style and performance.
+GenericName=Music Player
+Exec=/usr/bin/cider2 %U
+Icon=cider2
+Type=Application
+Categories=Audio;Music;Player;AudioVideo;Network;
+MimeType=x-scheme-handler/ame;x-scheme-handler/cider;x-scheme-handler/itms;x-scheme-handler/itmss;x-scheme-handler/musics;x-scheme-handler/music;

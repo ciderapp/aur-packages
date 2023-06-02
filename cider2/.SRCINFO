@@ -1,0 +1,24 @@
+pkgbase = cider2-git
+	pkgdesc = Cider2
+	pkgver = 0.0.1
+	pkgrel = 1
+	url = https://github.com/ciderapp/project2.git
+	arch = armv7h
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = npm
+	makedepends = pnpm
+	makedepends = python
+	depends = gtk3
+	depends = nss
+	optdepends = libnotify: Playback notifications
+	provides = cider
+	conflicts = cider
+	source = git+https://github.com/CiderApp/project2.git
+	source = cider2.desktop
+	sha256sums = SKIP
+	sha256sums = 8a9b5584642b5a261a9e65701542068eb5b282cc104b33e8a64484708fe5c663
+
+pkgname = cider2-git

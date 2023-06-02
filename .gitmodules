@@ -1,0 +1,9 @@
+[submodule "cider"]
+	path = cider
+	url = https://aur.archlinux.org/cider.git
+[submodule "cider-bin"]
+	path = cider-bin
+	url = https://aur.archlinux.org/cider-bin.git
+[submodule "cider-git"]
+	path = cider-git
+	url = https://aur.archlinux.org/cider-git.git
