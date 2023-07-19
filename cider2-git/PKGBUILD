@@ -1,11 +1,11 @@
 # Maintainer: Core_UK <dev@coredev.uk>
 
 _repo=project2
-_branch=main
+_branch="main"
 
 pkgname=cider2-git
 _pkgname=cider2
-pkgver=2.0.3.r2983.ceae0790
+pkgver=2.1.1.r3450.f2bdbb64
 pkgrel=1
 pkgdesc="Cider 2. The next iteration of Cider rebuilt from the ground up with Vue.js and Electron."
 arch=(x86_64)
