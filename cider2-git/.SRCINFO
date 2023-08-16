@@ -1,8 +1,8 @@
-pkgbase = cider2-git
+pkgbase = cider-git
 	pkgdesc = Cider 2. The next iteration of Cider rebuilt from the ground up with Vue.js and Electron.
-	pkgver = 2.1.0.r3073.c2728f7d
+	pkgver = 2.1.2.r3532.eb6bd0d1
 	pkgrel = 1
-	url = https://github.com/ciderapp/cider2.git
+	url = https://github.com/ciderapp/cider.git
 	arch = x86_64
 	license = AGPL3
 	makedepends = nvm
@@ -12,9 +12,9 @@ pkgbase = cider2-git
 	depends = alsa-lib
 	depends = libxcrypt-compat
 	optdepends = libnotify: Playback notifications
-	provides = cider2
-	conflicts = cider2
-	source_x86_64 = cider2::git+https://github.com/ciderapp/project2.git#branch=feat/catalog
+	provides = cider
+	conflicts = cider
+	source_x86_64 = cider::git+https://github.com/ciderapp/project2.git#branch=main
 	sha256sums_x86_64 = SKIP
 
-pkgname = cider2-git
+pkgname = cider-git

@@ -3,9 +3,9 @@
 _repo=project2
 _branch="main"
 
-pkgname=cider2-git
-_pkgname=cider2
-pkgver=2.1.1.r3450.f2bdbb64
+pkgname=cider-git
+_pkgname=cider
+pkgver=2.1.2.r3532.eb6bd0d1
 pkgrel=1
 pkgdesc="Cider 2. The next iteration of Cider rebuilt from the ground up with Vue.js and Electron."
 arch=(x86_64)
