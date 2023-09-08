@@ -1,4 +1,4 @@
-cider2/
+cider/
 pkg/
 src/
 *.pkg.tar.zst
