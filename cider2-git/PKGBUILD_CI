@@ -1,6 +1,6 @@
 # Maintainer: Core_UK <dev@coredev.uk>
 
-_repo=project2
+_repo=izanagi
 _branch="main"
 
 pkgname=cider-git

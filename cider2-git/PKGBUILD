@@ -1,11 +1,12 @@
 # Maintainer: Core_UK <dev@coredev.uk>
 
-_repo=project2
-_branch="main"
+_repo=izanagi
+_rcVersion=
+_releaseBuild=true
 
 pkgname=cider-git
 _pkgname=cider
-pkgver=2.1.2
+pkgver=2.3.2
 pkgrel=1
 pkgdesc="Cider 2. The next iteration of Cider rebuilt from the ground up with Vue.js and Electron."
 arch=(x86_64)
@@ -16,7 +17,7 @@ optdepends=('libnotify: Playback notifications')
 makedepends=(nvm fontconfig)
 provides=(${_pkgname})
 conflicts=(${_pkgname})
-source_x86_64=("${_pkgname}::git+https://github.com/ciderapp/${_repo}.git#branch=${_branch}")
+source_x86_64=("${_pkgname}::git+https://github.com/ciderapp/${_repo}.git")
 sha256sums_x86_64=('SKIP')
  
 _ensure_local_nvm() {
@@ -32,10 +33,15 @@ _ensure_local_nvm() {
 
 pkgver() {
     cd "${srcdir}/${pkgname%-git}"
-    printf "%s.r%s.%s" "$(awk -F'"' '/"version": ".+"/{ print $4; exit; }' package.json)" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+    if $_releaseBuild; then
+      echo "$(awk -F'"' '/"version": ".+"/{ print $4; exit; }' package.json)"
+    else
+      printf "%s.r%s.%s%s" "$(awk -F'"' '/"version": ".+"/{ print $4; exit; }' package.json)" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)" "${_rcVersion}"
+    fi
 }
 
 prepare() {
+  exit;
   cd "${srcdir}/${_pkgname}"
   _ensure_local_nvm
   nvm install
