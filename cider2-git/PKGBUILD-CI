@@ -14,7 +14,7 @@ url="https://github.com/ciderapp/${_pkgname}.git"
 license=()
 provides=(${_pkgname})
 conflicts=(${_pkgname})
-source_x86_64=("${_pkgname}::git+https://github.com/ciderapp/${_repo}.git")
+source_x86_64=("${_pkgname}::git+ssh://git@github.com/ciderapp/${_repo}.git")
 sha256sums_x86_64=('SKIP')
 
 pkgver() {
