@@ -41,7 +41,6 @@ pkgver() {
 }
 
 prepare() {
-  exit;
   cd "${srcdir}/${_pkgname}"
   _ensure_local_nvm
   nvm install
