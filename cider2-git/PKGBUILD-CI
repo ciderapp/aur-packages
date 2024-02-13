@@ -24,7 +24,7 @@ pkgver() {
 
 build() {
   cd "${srcdir}/${_pkgname}"
-  npx -y check-engine && yarn install && yarn dist && mv dist/electron/Packaged/*.deb "${srcdir}/" && cd "${srcdir}"
+  npx -y check-engine && yarn install && yarn dist && cp dist/electron/Packaged/*.deb "${srcdir}/" && cd "${srcdir}"
   ar x *_amd64.deb data.tar.xz
 }
  
