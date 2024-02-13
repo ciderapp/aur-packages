@@ -5,7 +5,7 @@ _rcVersion=
 _releaseBuild=true
 
 pkgname=cider-git
-_pkgname=cider
+_pkgname=${pkgname%-git}
 pkgver=2.3.1
 pkgrel=1
 pkgdesc="Cider 2. The next iteration of Cider rebuilt from the ground up with Vue.js and Electron."
@@ -32,7 +32,7 @@ _ensure_local_nvm() {
 }
 
 pkgver() {
-    cd "${srcdir}/${pkgname%-git}"
+    cd "${srcdir}/${_pkgname}"
     if $_releaseBuild; then
       echo "$(awk -F'"' '/"version": ".+"/{ print $4; exit; }' package.json)"
     else
@@ -56,6 +56,9 @@ build() {
 }
  
 package() {
+  # License
+  install -Dm644 "${srcdir}/${_pkgname}/LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+
   # Extract package data
   bsdtar -xf ${srcdir}/data.tar.xz -C ${pkgdir}/
   # mv "${pkgdir}/opt/${_pkgname^}" "${pkgdir}/opt/${pkgname}" # Disabled as breaks desktop file
