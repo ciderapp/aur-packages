@@ -17,7 +17,7 @@ optdepends=('libnotify: Playback notifications')
 makedepends=(fontconfig)
 provides=(${_pkgname})
 conflicts=(${_pkgname})
-source_x86_64=("$_pkgname"::"git+file:///$PACKAGE_PATH")
+source_x86_64=("${_pkgname}::git+https://github.com/ciderapp/${_repo}.git")
 sha256sums_x86_64=('SKIP')
 
 pkgver() {
